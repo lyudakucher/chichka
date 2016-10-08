@@ -1,0 +1,68 @@
+.shop {
+    font-size: 0;
+    margin:0 -2.5%;
+}
+.shop__item {
+    display: inline-block;
+    margin:2.5%;
+    width: 28.33%;
+    text-align: center;
+    cursor: pointer;
+    @include fs;
+    min-width: 200px;
+    .shop__item__img {
+        overflow: hidden;
+        img {
+            width: 100%;
+        };
+    };
+    h3 {
+        font-size:1.6em;
+        padding-bottom:5px;
+    };
+    p {
+        font-size: 1.2em;
+    }
+    &:hover {
+        color: $maincolorhover;
+        transition: all 0.5s ease-in-out;
+        img {
+            transform: scale(0.95);
+            transition: all 0.5s ease-in-out;
+        };
+    };
+    .shop__item__name {
+        padding: 10px 0;
+        .description {
+            padding:5px 0 10px;
+        }
+    }
+}
+
+.shop__button {
+    text-align: center;
+    background-color: transparent;
+}
+
+.shop__button__link {
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid $button;
+    padding: 20px 54px;
+    @include fs;
+    color: $button;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: transparent;
+    transition: $transition;
+}
+
+.shop__button__link:active {
+    box-shadow: 0px 1px 0px 0px;
+}
+
+.shop__button__link:hover {
+    background-color: $button;
+    color: $buttonhover;
+}

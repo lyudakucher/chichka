@@ -1,0 +1,10 @@
+{% from "parts/macro.html" import GameList %}
+
+<div class="container">
+    <h2>Грай та вигравай!</h2>
+    <div class="game">
+        {% for game_item in game_items %}
+        {{ GameList(game_item) }}
+        {% endfor %}
+    </div>
+</div>

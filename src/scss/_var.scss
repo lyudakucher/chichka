@@ -1,6 +1,10 @@
 $maincolor: #2e2e2e;
+$maincolorhover: red;
 
-$transition: all 0.3s ease-in-out;
+$button: green;
+$buttonhover: red;
+
+$transition: all 0.5s ease-in-out;
 $mainfs: 14px;
 
 @mixin fs {
@@ -12,6 +16,7 @@ $mainfs: 14px;
     font-size: 12px;
   };
 }
+
 @mixin before {
   content: '';
   position: absolute;

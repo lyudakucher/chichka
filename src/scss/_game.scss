@@ -1,0 +1,33 @@
+.game {
+  font-size: 0;
+  margin:0 -2.5%;
+}
+.game__item {
+  display: inline-block;
+  text-decoration: none;
+  margin:2.5%;
+  width: 28.33%;
+  min-width:200px;
+  padding-bottom:2%;
+  text-align: center;
+  cursor: pointer;;
+  @include fs;
+  .game__item__img {
+    overflow: hidden;
+    img {
+      width: 100%;
+    };
+  };
+  h3 {
+    font-size:1.8em;
+  };
+  &:hover {
+    color: $maincolorhover;
+    img {
+      transform: scale(1.2);
+    };
+  };
+  .game__item__name {
+    padding: 10px 0;
+  }
+}

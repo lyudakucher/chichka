@@ -1,5 +1,27 @@
 {% macro ShopList(item) %}
     <div class="shop__item">
-
+        <div class="shop__item__img">
+            <img src="{{ item.img }}" alt="">
+        </div>
+        <div class="shop__item__name">
+            <h3>{{ item.name }}</h3>
+            <p class="description">{{ item.description }}</p>
+            <p class="price">{{ item.price }}</p>
+        </div>
+        <button class="shop__button">
+            <a href="" class="shop__button__link">Купити</a>
+        </button>
     </div>
 {% endmacro %}
+
+{% macro GameList(item) %}
+<a class="game__item">
+    <div class="game__item__img">
+        <img src="{{ item.img }}" alt="">
+    </div>
+    <div class="game__item__name">
+        <h3>{{ item.name }}</h3>
+    </div>
+</a>
+{% endmacro %}
+

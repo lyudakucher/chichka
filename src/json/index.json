@@ -11,40 +11,54 @@
   ],
   "shop_items": [
     {
+      "img": "../img/car.png",
+      "name": "Залізна дитина проти Локі",
+      "description": "Фігурка Lego",
+      "price": "350 грн"
+    },
+    {
+      "img": "../img/dog.jpg",
+      "name": "Міні-робот Wow Wee собака сірий",
+      "description": "Інтерактивна іграшка",
+      "price": "391 грн"
+    },
+    {
+      "img": "../img/khkhkh.jpg",
+      "name": "Інтерактивна іграшка Woody O'Time",
+      "description": "Інтерактивна іграшка",
+      "price": "145 грн"
+    },
+    {
+      "img": "../img/plain.jpg",
+      "name": "Інерціонний транспорт Бетмена",
+      "description": "Літаючий корабель",
+      "price": "520 грн"
+    },
+    {
+      "img": "../img/dino.jpg",
+      "name": "T-Rex з рухомими челюстями",
+      "description": "Іграшка-динозавр",
+      "price": "134 грн"
+    },
+    {
+      "img": "../img/star.jpg",
+      "name": "Телескоп зі штативом",
+      "description": "Для досліджень удома",
+      "price": "1800 грн"
+    }
+  ],
+  "game_items": [
+    {
       "img": "",
-      "name": "",
-      "description": "",
-      "price": ""
+      "name": "NAME1"
     },
     {
       "img": "",
-      "name": "",
-      "description": "",
-      "price": ""
+      "name": "NAME1"
     },
     {
       "img": "",
-      "name": "",
-      "description": "",
-      "price": ""
-    },
-    {
-      "img": "",
-      "name": "",
-      "description": "",
-      "price": ""
-    },
-    {
-      "img": "",
-      "name": "",
-      "description": "",
-      "price": ""
-    },
-    {
-      "img": "",
-      "name": "",
-      "description": "",
-      "price": ""
+      "name": "NAME1"
     }
   ]
 }
