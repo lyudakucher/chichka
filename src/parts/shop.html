@@ -1,0 +1,8 @@
+<div class="container">
+    <h2>Вітаю! Ти можеш придбати такі товари</h2>
+    <div class="shop">
+        {% for items in shop_items %}
+            {{ ShopList(item) }}
+        {% endfor %}
+    </div>
+</div>

@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "templates/root.html" %}
 
-</body>
-</html>
+{% block header %}
+{% include "parts/header-menu.html" %}
+{% endblock %}
+
+{% block main %}
+{% include "parts/registration.html" %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+

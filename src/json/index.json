@@ -1,0 +1,50 @@
+{
+  "menu": [
+    {
+      "link": "/game.html",
+      "name": "Гра"
+    },
+    {
+      "number": "/shop.html",
+      "name": "Магазин"
+    }
+  ],
+  "shop_items": [
+    {
+      "img": "",
+      "name": "",
+      "description": "",
+      "price": ""
+    },
+    {
+      "img": "",
+      "name": "",
+      "description": "",
+      "price": ""
+    },
+    {
+      "img": "",
+      "name": "",
+      "description": "",
+      "price": ""
+    },
+    {
+      "img": "",
+      "name": "",
+      "description": "",
+      "price": ""
+    },
+    {
+      "img": "",
+      "name": "",
+      "description": "",
+      "price": ""
+    },
+    {
+      "img": "",
+      "name": "",
+      "description": "",
+      "price": ""
+    }
+  ]
+}

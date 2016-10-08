@@ -1,0 +1,10 @@
+header {
+  @include clearfix;
+}
+
+nav {
+  float: left;
+}
+.user__info {
+  float: right;
+}

@@ -1,5 +1,36 @@
+$maincolor: #2e2e2e;
+
+$transition: all 0.3s ease-in-out;
+$mainfs: 14px;
+
+@mixin fs {
+  font-size: $mainfs;
+  @include respond-to(tablet) {
+    font-size: 13px;
+  };
+  @include respond-to(mobile) {
+    font-size: 12px;
+  };
+}
 @mixin before {
   content: '';
   position: absolute;
   display: block;
 }
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    overflow: hidden;
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container {
+  width:98%;
+  padding:0 1%;
+  max-width: 900px;
+  margin:0 auto;
+}
+
