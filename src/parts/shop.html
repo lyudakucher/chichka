@@ -2,9 +2,14 @@
 
 <div class="container">
     <h2>Вітаю! Тепер ти можеш придбати собі товари</h2>
+    <p class="main_description">
+        Успішні у навчанні здійснюють свої мрії.<br>
+        <br>У нашому магазині можеш знайти різні призи та придбати їх за свої чікери.
+        Більше знаєш — більше маєш. Let’s start!
+    </p>
     <div class="shop">
         {% for shop_item in shop_items %}
-            {{ ShopList(shop_item) }}
+        {{ ShopList(shop_item) }}
         {% endfor %}
     </div>
 </div>
