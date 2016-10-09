@@ -5,7 +5,7 @@
       "name": "Гра"
     },
     {
-      "number": "/shop.html",
+      "link": "/shop.html",
       "name": "Магазин"
     }
   ],
@@ -14,51 +14,54 @@
       "img": "../img/car.jpg",
       "name": "Залізна дитина проти Локі",
       "description": "Фігурка Lego",
-      "price": "350 грн"
+      "price": "350 балів"
     },
     {
       "img": "../img/dog.jpg",
       "name": "Міні-робот Wow Wee собака сірий",
       "description": "Інтерактивна іграшка",
-      "price": "391 грн"
+      "price": "391 балів"
     },
     {
       "img": "../img/khkhkh.jpg",
       "name": "Інтерактивна іграшка Woody O'Time",
       "description": "Інтерактивна іграшка",
-      "price": "145 грн"
+      "price": "145 балів"
     },
     {
       "img": "../img/plain.jpg",
       "name": "Інерціонний транспорт Бетмена",
       "description": "Літаючий корабель",
-      "price": "520 грн"
+      "price": "520 балів"
     },
     {
       "img": "../img/dino.jpg",
       "name": "T-Rex з рухомими челюстями",
       "description": "Іграшка-динозавр",
-      "price": "134 грн"
+      "price": "134 балів"
     },
     {
       "img": "../img/star.jpg",
       "name": "Телескоп зі штативом",
       "description": "Для досліджень удома",
-      "price": "1800 грн"
+      "price": "1800 балів"
     }
   ],
   "game_items": [
     {
-      "img": "",
-      "name": "NAME1"
+      "img": "../img/ramka-02.jpg",
+      "name": "На селі",
+      "description": "вгадай, яка це свійська тварина"
     },
     {
-      "img": "",
-      "name": "NAME1"
+      "img": "../img/ramka-02.jpg",
+      "name": "У пошуках зірок",
+      "description": "дізнайся основи астрономії"
     },
     {
-      "img": "",
-      "name": "NAME1"
+      "img": "../img/ramka-02.jpg",
+      "name": "Мішанина слів",
+      "description": "склади речення зі слів"
     }
   ]
 }

@@ -5,26 +5,103 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
     <title></title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<header>
     
-<nav>
-    
-    <a href="/game.html">Гра</a>
-    
-    <a href="">Магазин</a>
-    
-</nav>
-<div class="user__info">
-    <a href="/person.html">Особистий кабінет</a>
-</div>
-
+<header class="header">
+    <nav>
+        
+        <a href="/game.html">Гра</a>
+        
+        <a href="/shop.html">Магазин</a>
+        
+    </nav>
+    <div class="user__info">
+        <a href="/person.html">Особистий кабінет</a>
+    </div>
 </header>
+
 <main>
     
 
+<div class="registration_section">
+    <div class="container">
+        <h2>Реєстрація</h2>
+        <p class="main_description">
+            Для початку великої гри потрібно заповнити маленьку анкету Let’s start!
+        </p>
+        <div class="contacts-content__form">
+            
+            
+<form class="form" action="feedback.php" method="POST">
+    <p class="title-form">Заповніть дані дитини</p>
+    
+<div class="form-group">
+    <label class="form-label" for="Childname_id">Нікнейм</label>
+    <input class="form-control" id="Childname_id" name="Childname" type="text" value="">
+</div>
+
+    
+<div class="form-group">
+    <label class="form-label" for="Childpass_id">Пароль</label>
+    <input class="form-control" id="Childpass_id" name="Childpass" type="text" value="">
+</div>
+
+    
+<div class="form-group">
+    <label class="form-label" for="Years_id">Вік</label>
+    <input class="form-control" id="Years_id" name="Years" type="text" value="">
+</div>
+
+    <p class="title-form">Заповніть ваші дані</p>
+    
+<div class="form-group">
+    <label class="form-label" for="Name_id">Ваш нікнейм</label>
+    <input class="form-control" id="Name_id" name="Name" type="text" value="">
+</div>
+
+    
+<div class="form-group">
+    <label class="form-label" for="Pass_id">Пароль</label>
+    <input class="form-control" id="Pass_id" name="Pass" type="text" value="">
+</div>
+
+    
+<div class="form-group">
+    <label class="form-label" for="Email_id">Email</label>
+    <input class="form-control" id="Email_id" name="Email" type="email" value="">
+</div>
+
+    <p class="title-form">Фінансові дані</p>
+    
+<div class="form-group">
+    <label class="form-label" for="Number_id">Номер банківської картки</label>
+    <input class="form-control" id="Number_id" name="Number" type="text" value="">
+</div>
+
+    
+<div class="form-group">
+    <label class="form-label" for="YY/MM_id">YY/MM</label>
+    <input class="form-control" id="YY/MM_id" name="YY/MM" type="text" value="">
+</div>
+
+    
+<div class="form-group">
+    <label class="form-label" for="CVV2_id">код CVV2</label>
+    <input class="form-control" id="CVV2_id" name="CVV2" type="text" value="">
+</div>
+
+</form>
+
+            
+            <button class="contacts__button">
+                <a href="/game.html" class="contacts__button__link">Зареєструвати</a>
+            </button>
+        </div>
+    </div>
+</div>
 
 </main>
 <footer>

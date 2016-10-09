@@ -1,0 +1,53 @@
+.contacts-content__form {
+  max-width:500px;
+  margin:0 auto;
+}
+.contacts__button {
+  @extend .shop__button;
+  text-align: left;
+}
+.contacts__button__link{
+  @extend .shop__button__link;
+}
+
+.contacts__button {
+  width: 100%;
+  padding-top:40px;
+  @include respond-to(mobile) {
+    order: 3;
+  }
+}
+.title-form {
+  font-size:1.2em;
+  padding-top:30px;
+}
+
+.form-group {
+  width: 100%;
+  text-align: left;
+}
+
+.form-control {
+  width: 100%;
+  border: 1px solid $inputbg;
+  background-color: $inputbg;
+  @include fs;
+  padding: 15px;
+}
+
+.form-label {
+  padding: 12px 0 3px;
+  display: block;
+  line-height:2em;
+  font-weight:400;
+  font-size:0.9em;
+  color: $inputbg;
+}
+
+.header {
+  background-color: #67b2c8;
+}
+
+.registration_section {
+  background-color: #67b2c8;
+}

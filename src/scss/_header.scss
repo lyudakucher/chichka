@@ -1,9 +1,25 @@
 header {
   @include clearfix;
+  padding:20px 2%;
+  font-size:0.8em;
+  text-transform: uppercase;
+  a {
+    text-decoration: none;
+    color: $linkcolor;
+    &:hover {
+      color: $linkcolorhover;
+    }
+  }
+  span {
+    color: $linkcolor;
+  }
 }
 
 nav {
   float: left;
+  a {
+    margin-right:20px;
+  }
 }
 .user__info {
   float: right;

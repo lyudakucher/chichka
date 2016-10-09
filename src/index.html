@@ -1,11 +1,10 @@
 {% extends "templates/root.html" %}
 
-{% block header %}
-    {% include "parts/header.html" %}
-{% endblock %}
-
 {% block main %}
+<section class="fullview">
+    {% include "parts/header.html" %}
     {% include "parts/main.html" %}
+</section>
 {% endblock %}
 
 {% block footer %}

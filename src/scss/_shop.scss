@@ -17,7 +17,7 @@
         };
     };
     h3 {
-        font-size:1.6em;
+        font-size:1.2em;
         padding-bottom:5px;
     };
     p {
@@ -65,4 +65,8 @@
 .shop__button__link:hover {
     background-color: $button;
     color: $buttonhover;
+}
+
+.price {
+    color: $button;
 }
