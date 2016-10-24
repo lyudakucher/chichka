@@ -1,17 +1,19 @@
 {% from "parts/macro.html" import feedback_form %}
-<div class="registration_section">
+<div class="registration_section" ng-app="Registration">
     <div class="container">
         <h2>Реєстрація</h2>
         <p class="main_description">
             Для початку великої гри потрібно заповнити маленьку анкету Let’s start!
         </p>
-        <div class="contacts-content__form">
+        <div class="contacts-content__form" ng-controller="RegistrationController">
             {% block content %}
             {{ feedback_form('feedback.php', 'POST') }}
             {% endblock %}
             <button class="contacts__button">
-                <a href="/game.html" class="contacts__button__link">Зареєструвати</a>
+                <a class="contacts__button__link" ng-click="register()">Зареєструвати</a>
             </button>
         </div>
     </div>
 </div>
+<script src="/js/registration.module.js"></script>
+<script src="/js/registration.controller.js"></script>

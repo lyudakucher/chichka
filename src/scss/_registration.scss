@@ -8,6 +8,12 @@
 }
 .contacts__button__link{
   @extend .shop__button__link;
+  color: $button;
+}
+
+.contacts__button__link:hover {
+  background-color: $button;
+  color: $buttonhover;
 }
 
 .contacts__button {

@@ -7,6 +7,24 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script type="text/javascript">
+        function onVisaCheckoutReady(){
+            V.init( {
+                apikey: "IV0DSNR2K5344TQCHZFB21kACjcrUhSyQSJdlTxiz8n5rsmHo",
+                paymentRequest:{
+                    currencyCode: "USD",
+                    total: "10.00"
+                }
+            });
+            V.on("payment.success", function(payment)
+            {alert(JSON.stringify(payment)); });
+            V.on("payment.cancel", function(payment)
+            {alert(JSON.stringify(payment)); });
+            V.on("payment.error", function(payment, error)
+            {alert(JSON.stringify(error)); });
+        }
+    </script>
 </head>
 <body>
     
@@ -27,41 +45,21 @@
     
 
 
-<div class="container">
+<div class="container" ng-app="Games">
     <h2>Грай та вигравай!</h2>
-    <div class="game">
-        
-        
-<a class="game__item">
-    <div class="game__item__img">
-        <img src="../img/ramka-02.jpg" alt="">
-        <h3>На селі</h3>
-        <p class="description">вгадай, яка це свійська тварина</p>
+    <div class="game" ng-controller="GameController">
+        <div ng-repeat="game_item in games">
+            <a class="game__item">
+                <div class="game__item__img">
+                    <img ng-src="game_item.img" alt="">
+                    <h3 ng-bind="game_item.name"></h3>
+                    <p class="description" ng-bind="game_item.description"></p>
+                </div>
+            </a>
+        </div>
     </div>
-</a>
-
-        
-        
-<a class="game__item">
-    <div class="game__item__img">
-        <img src="../img/ramka-02.jpg" alt="">
-        <h3>У пошуках зірок</h3>
-        <p class="description">дізнайся основи астрономії</p>
-    </div>
-</a>
-
-        
-        
-<a class="game__item">
-    <div class="game__item__img">
-        <img src="../img/ramka-02.jpg" alt="">
-        <h3>Мішанина слів</h3>
-        <p class="description">склади речення зі слів</p>
-    </div>
-</a>
-
-        
-    </div>
+    <script src="/js/game.module.js"></script>
+    <script src="/js/game.controller.js"></script>
 </div>
 
 </main>
@@ -70,6 +68,7 @@
 
 </footer>
 <link rel="stylesheet" href="css/style.css"/>
+
 </body>
 </html>
 

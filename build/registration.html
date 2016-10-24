@@ -7,6 +7,24 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script type="text/javascript">
+        function onVisaCheckoutReady(){
+            V.init( {
+                apikey: "IV0DSNR2K5344TQCHZFB21kACjcrUhSyQSJdlTxiz8n5rsmHo",
+                paymentRequest:{
+                    currencyCode: "USD",
+                    total: "10.00"
+                }
+            });
+            V.on("payment.success", function(payment)
+            {alert(JSON.stringify(payment)); });
+            V.on("payment.cancel", function(payment)
+            {alert(JSON.stringify(payment)); });
+            V.on("payment.error", function(payment, error)
+            {alert(JSON.stringify(error)); });
+        }
+    </script>
 </head>
 <body>
     
@@ -26,13 +44,13 @@
 <main>
     
 
-<div class="registration_section">
+<div class="registration_section" ng-app="Registration">
     <div class="container">
         <h2>Реєстрація</h2>
         <p class="main_description">
             Для початку великої гри потрібно заповнити маленьку анкету Let’s start!
         </p>
-        <div class="contacts-content__form">
+        <div class="contacts-content__form" ng-controller="RegistrationController">
             
             
 <form class="form" action="feedback.php" method="POST">
@@ -40,68 +58,82 @@
     
 <div class="form-group">
     <label class="form-label" for="Childname_id">Нікнейм</label>
-    <input class="form-control" id="Childname_id" name="Childname" type="text" value="">
+    <input class="form-control" ng-model="childName" id="Childname_id" name="Childname" type="text" value="">
 </div>
 
     
 <div class="form-group">
     <label class="form-label" for="Childpass_id">Пароль</label>
-    <input class="form-control" id="Childpass_id" name="Childpass" type="text" value="">
+    <input class="form-control" ng-model="childPass" id="Childpass_id" name="Childpass" type="text" value="">
 </div>
 
     
 <div class="form-group">
     <label class="form-label" for="Years_id">Вік</label>
-    <input class="form-control" id="Years_id" name="Years" type="text" value="">
+    <input class="form-control" ng-model="childYears" id="Years_id" name="Years" type="text" value="">
 </div>
 
     <p class="title-form">Заповніть ваші дані</p>
     
 <div class="form-group">
     <label class="form-label" for="Name_id">Ваш нікнейм</label>
-    <input class="form-control" id="Name_id" name="Name" type="text" value="">
+    <input class="form-control" ng-model="Name" id="Name_id" name="Name" type="text" value="">
 </div>
 
     
 <div class="form-group">
     <label class="form-label" for="Pass_id">Пароль</label>
-    <input class="form-control" id="Pass_id" name="Pass" type="text" value="">
+    <input class="form-control" ng-model="Password" id="Pass_id" name="Pass" type="text" value="">
+</div>
+
+    
+<div class="form-group">
+    <label class="form-label" for="ConfirmPass_id">Повторіть пароль</label>
+    <input class="form-control" ng-model="ConfirmPassword" id="ConfirmPass_id" name="ConfirmPass" type="text" value="">
 </div>
 
     
 <div class="form-group">
     <label class="form-label" for="Email_id">Email</label>
-    <input class="form-control" id="Email_id" name="Email" type="email" value="">
+    <input class="form-control" ng-model="Email" id="Email_id" name="Email" type="email" value="">
 </div>
 
     <p class="title-form">Фінансові дані</p>
     
 <div class="form-group">
     <label class="form-label" for="Number_id">Номер банківської картки</label>
-    <input class="form-control" id="Number_id" name="Number" type="text" value="">
+    <input class="form-control" ng-model="cardNumber" id="Number_id" name="Number" type="text" value="">
 </div>
 
     
 <div class="form-group">
-    <label class="form-label" for="YY/MM_id">YY/MM</label>
-    <input class="form-control" id="YY/MM_id" name="YY/MM" type="text" value="">
+    <label class="form-label" for="YY_id">YY</label>
+    <input class="form-control" ng-model="expirationYear" id="YY_id" name="YY" type="text" value="">
+</div>
+
+    
+<div class="form-group">
+    <label class="form-label" for="MM_id">MM</label>
+    <input class="form-control" ng-model="expirationMonth" id="MM_id" name="MM" type="text" value="">
 </div>
 
     
 <div class="form-group">
     <label class="form-label" for="CVV2_id">код CVV2</label>
-    <input class="form-control" id="CVV2_id" name="CVV2" type="text" value="">
+    <input class="form-control" ng-model="cvv" id="CVV2_id" name="CVV2" type="text" value="">
 </div>
 
 </form>
 
             
             <button class="contacts__button">
-                <a href="/game.html" class="contacts__button__link">Зареєструвати</a>
+                <a class="contacts__button__link" ng-click="register()">Зареєструвати</a>
             </button>
         </div>
     </div>
 </div>
+<script src="/js/registration.module.js"></script>
+<script src="/js/registration.controller.js"></script>
 
 </main>
 <footer>
@@ -109,6 +141,7 @@
 
 </footer>
 <link rel="stylesheet" href="css/style.css"/>
+
 </body>
 </html>
 

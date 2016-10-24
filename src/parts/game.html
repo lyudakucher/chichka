@@ -1,10 +1,18 @@
-{% from "parts/macro.html" import GameList %}
 
-<div class="container">
+
+<div class="container" ng-app="Games">
     <h2>Грай та вигравай!</h2>
-    <div class="game">
-        {% for game_item in game_items %}
-        {{ GameList(game_item) }}
-        {% endfor %}
+    <div class="game" ng-controller="GameController">
+        <div ng-repeat="game_item in games">
+            <a class="game__item">
+                <div class="game__item__img">
+                    <img ng-src="game_item.img" alt="">
+                    <h3 ng-bind="game_item.name"></h3>
+                    <p class="description" ng-bind="game_item.description">{{ game_item.description }}</p>
+                </div>
+            </a>
+        </div>
     </div>
+    <script src="/js/game.module.js"></script>
+    <script src="/js/game.controller.js"></script>
 </div>

@@ -9,7 +9,7 @@
             <p class="price">{{ item.price }}</p>
         </div>
         <button class="shop__button">
-            <a href="" class="shop__button__link">Купити</a>
+            <a href="/buy.html" class="shop__button__link">Купити</a>
         </button>
     </div>
 {% endmacro %}
@@ -24,10 +24,10 @@
 </a>
 {% endmacro %}
 
-{% macro form_input(name, value='', title=name, type='text') %}
+{% macro form_input(model, name, value='', title=name, type='text') %}
 <div class="form-group">
     <label class="form-label" for="{{ name }}_id">{{ title }}</label>
-    <input class="form-control" id="{{ name }}_id" name="{{ name }}" type="{{ type }}" value="{{ value | escape }}">
+    <input class="form-control" ng-model="{{ model }}" id="{{ name }}_id" name="{{ name }}" type="{{ type }}" value="{{ value | escape }}">
 </div>
 {% endmacro %}
 
@@ -41,17 +41,19 @@
 {% macro feedback_form(action="", method="POST") %}
 <form class="form" action="{{ action }}" method="{{ method }}">
     <p class="title-form">Заповніть дані дитини</p>
-    {{ form_input("Childname", '', "Нікнейм") }}
-    {{ form_input("Childpass", '', "Пароль") }}
-    {{ form_input("Years", '', "Вік") }}
+    {{ form_input('childName', "Childname", '', "Нікнейм") }}
+    {{ form_input('childPass', "Childpass", '', "Пароль") }}
+    {{ form_input('childYears', "Years", '', "Вік") }}
     <p class="title-form">Заповніть ваші дані</p>
-    {{ form_input("Name", '', "Ваш нікнейм") }}
-    {{ form_input("Pass", '', "Пароль") }}
-    {{ form_input("Email", '', "Email", 'email') }}
+    {{ form_input('Name',"Name", '', "Ваш нікнейм") }}
+    {{ form_input('Password',"Pass", '', "Пароль") }}
+    {{ form_input('ConfirmPassword', "ConfirmPass", '', "Повторіть пароль") }}
+    {{ form_input('Email',"Email", '', "Email", 'email') }}
     <p class="title-form">Фінансові дані</p>
-    {{ form_input("Number", '', "Номер банківської картки") }}
-    {{ form_input("YY/MM", '', "YY/MM") }}
-    {{ form_input("CVV2", '', "код CVV2") }}
+    {{ form_input('cardNumber',"Number", '', "Номер банківської картки") }}
+    {{ form_input('expirationYear',"YY", '', "YY") }}
+    {{ form_input('expirationMonth',"MM", '', "MM") }}
+    {{ form_input('cvv',"CVV2", '', "код CVV2") }}
 </form>
 {% endmacro %}
 

@@ -1,0 +1,17 @@
+{% extends "templates/root.html" %}
+{% block header %}
+{% include "parts/header-menu.html" %}
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <h2>Купуй з VISA легко!</h2>
+    <img alt="Visa Checkout" class="v-button" role="button"
+         src="https://sandbox.secure.checkout.visa.com/wallet-services-web/xo/button.png"/>
+    <script type="text/javascript"
+            src="https://sandbox-assets.secure.checkout.visa.com/
+checkout-widget/resources/js/integration/v1/sdk.js">
+    </script>{% endblock %}
+</div>
+
+

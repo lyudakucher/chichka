@@ -7,6 +7,24 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script type="text/javascript">
+        function onVisaCheckoutReady(){
+            V.init( {
+                apikey: "IV0DSNR2K5344TQCHZFB21kACjcrUhSyQSJdlTxiz8n5rsmHo",
+                paymentRequest:{
+                    currencyCode: "USD",
+                    total: "10.00"
+                }
+            });
+            V.on("payment.success", function(payment)
+            {alert(JSON.stringify(payment)); });
+            V.on("payment.cancel", function(payment)
+            {alert(JSON.stringify(payment)); });
+            V.on("payment.error", function(payment, error)
+            {alert(JSON.stringify(error)); });
+        }
+    </script>
 </head>
 <body>
     {% block header %}{% endblock %}
@@ -17,6 +35,7 @@
     {% block footer %}{% endblock %}
 </footer>
 <link rel="stylesheet" href="css/style.css"/>
+
 </body>
 </html>
 
