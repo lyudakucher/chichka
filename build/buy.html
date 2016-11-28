@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script type="text/javascript">
+        function onVisaCheckoutReady(){
+            V.init( {
+                apikey: "IV0DSNR2K5344TQCHZFB21kACjcrUhSyQSJdlTxiz8n5rsmHo",
+                paymentRequest:{
+                    currencyCode: "USD",
+                    total: "10.00"
+                }
+            });
+            V.on("payment.success", function(payment)
+            {alert(JSON.stringify(payment)); });
+            V.on("payment.cancel", function(payment)
+            {alert(JSON.stringify(payment)); });
+            V.on("payment.error", function(payment, error)
+            {alert(JSON.stringify(error)); });
+        }
+    </script>
+</head>
+<body>
+    
+<header class="header">
+    <nav>
+        
+        <a href="/game.html">Гра</a>
+        
+        <a href="/shop.html">Магазин</a>
+        
+    </nav>
+    <div class="user__info">
+        <a href="/person.html">Особистий кабінет</a>
+    </div>
+</header>
+
+<main>
+    
+<div class="container">
+    <h2>Купуй з VISA легко!</h2>
+    <img alt="Visa Checkout" class="v-button" role="button"
+         src="https://sandbox.secure.checkout.visa.com/wallet-services-web/xo/button.png"/>
+    <script type="text/javascript"
+            src="https://sandbox-assets.secure.checkout.visa.com/
+checkout-widget/resources/js/integration/v1/sdk.js">
+    </script>
+</main>
+<footer>
+    
+</footer>
+<link rel="stylesheet" href="css/style.css"/>
+
+</body>
+</html>
+
